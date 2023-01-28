@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkflowCore", "WorkflowCore\WorkflowCore.csproj", "{ACFBFCD7-5A30-4E84-BA08-CC3BF32A5B3E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkflowCore", "WorkflowCore\WorkflowCore.csproj", "{CCABB3CF-2EAD-4514-9CC6-2CE7F5FE323D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{ACFBFCD7-5A30-4E84-BA08-CC3BF32A5B3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ACFBFCD7-5A30-4E84-BA08-CC3BF32A5B3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ACFBFCD7-5A30-4E84-BA08-CC3BF32A5B3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ACFBFCD7-5A30-4E84-BA08-CC3BF32A5B3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCABB3CF-2EAD-4514-9CC6-2CE7F5FE323D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCABB3CF-2EAD-4514-9CC6-2CE7F5FE323D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCABB3CF-2EAD-4514-9CC6-2CE7F5FE323D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCABB3CF-2EAD-4514-9CC6-2CE7F5FE323D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C50F577C-3BCB-494A-84E2-DD4E93C89976}
+		SolutionGuid = {26387990-06C1-4CE6-8128-1A2C72517FBF}
 	EndGlobalSection
 EndGlobal
