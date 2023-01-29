@@ -1,5 +1,10 @@
-﻿using Workflow.Greeting;
+﻿using Workflow.Events;
+using Workflow.Events.Dto;
+using Workflow.Greeting;
 using Workflow.Greeting.Dto;
+using Workflow.Workflows.Activities;
+using Workflow.Workflows.DecisionBranch;
+using Workflow.Workflows.ErrorHandling;
 
 using WorkflowCore.Interface;
 using WorkflowCore.Models;
@@ -8,13 +13,18 @@ namespace Workflow.Infrastructure
 {
     public static class RegisterWorkflow
     {
-        public static IApplicationBuilder UseWorkflow(this IApplicationBuilder ab)
+        public static IApplicationBuilder UseWorkflow(this IApplicationBuilder appBuilder)
         {
-            IWorkflowHost host = ab.ApplicationServices.GetRequiredService<IWorkflowHost>();
+            IWorkflowHost host = appBuilder.ApplicationServices.GetRequiredService<IWorkflowHost>();
 
             host.RegisterWorkflow<Hello, HelloDto>();
+            host.RegisterWorkflow<Alarm, AlarmDto>();
+            host.RegisterWorkflow<SendEmail, SendEmailDto>();
+            host.RegisterWorkflow<ServerDown, ServerDownDto>();
+            host.RegisterWorkflow<PartyRsvp, PartyRsvpDto>();
 
-            return ab.UseMiddleware<WorkflowMiddleware>();
+            host.Start();
+            return appBuilder;
         }
 
         public static IServiceCollection AddSteps(this IServiceCollection services)
@@ -35,6 +45,10 @@ namespace Workflow.Infrastructure
             services.AddWorkflow();
 
             services.AddScoped<IWorkflow<HelloDto>, Hello>();
+            services.AddScoped<IWorkflow<AlarmDto>, Alarm>();
+            services.AddScoped<IWorkflow<SendEmailDto>, SendEmail>();
+            services.AddScoped<IWorkflow<ServerDownDto>, ServerDown>();
+            services.AddScoped<IWorkflow<PartyRsvpDto>, PartyRsvp>();
 
             return services;
         }
